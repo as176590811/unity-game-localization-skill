@@ -25,9 +25,9 @@ Unity 游戏（.assets / dll）文本汉化的 AI Agent Skill 仓库。
 
 ## 前置条件
 
-- `unity-assets` MCP（需含：`scan_text` / `locate_text` / `translate_batch` / `import_json_batch` / `list_script_types` / `export_all`）
-- 本地 LLM 翻译服务（默认 `http://127.0.0.1:51821/api/translate`，与 XUnity.AutoTranslator LLMTranslate 同协议）
-- （dll 汉化需）dnSpy MCP 与 Python `dnfile`
+- [`unity-assets`](https://github.com/as176590811/UnityAssets-mcp) MCP（需含：`scan_text` / `locate_text` / `translate_batch` / `import_json_batch` / `list_script_types` / `export_all`）
+- 本地 LLM 翻译服务 [XUnityToolkit-WebUI](https://github.com/HanFengRuYue/XUnityToolkit-WebUI)（默认 `http://127.0.0.1:51821/api/translate`，与 XUnity.AutoTranslator LLMTranslate 同协议）
+- （dll 汉化需）[dnSpy MCP](https://github.com/KernelErr/dnSpy.Extension.MCP) 与 Python `dnfile`
 
 ## 目录结构
 

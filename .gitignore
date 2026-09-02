@@ -1,0 +1,36 @@
+# --- 系统 / 编辑器 ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+*.suo
+*.user
+
+# --- Python / 本地脚本产物 ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# --- 本 skill 执行时的临时产物（按需在仓库外生成，避免误提交）---
+# 导出/中间数据
+unique_en.jsonl
+unique_zh.jsonl
+to_translate.jsonl
+to_translate_zh.jsonl
+*.bak
+*.orig
+*_backup*
+
+# 工作/临时目录
+tmp/
+work/
+export/
+导出/
+
+# --- 日志 ---
+*.log

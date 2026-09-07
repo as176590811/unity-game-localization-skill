@@ -34,16 +34,32 @@ Unity 游戏（.assets / dll）文本汉化的 AI Agent Skill 仓库。
 ```
 skills/
 ├── .gitignore
+├── LICENSE
 ├── README.md
 └── unity-game-localization/
-    └── SKILL.md          # 完整工作流、速查表、陷阱记录、脚本骨架
+    ├── SKILL.md                    # 主流程：前置准备 → 提取 → 分类 → 翻译 → 回写 → 审计
+    ├── references/
+    │   ├── class-fields.md         # 脚本类→文本字段字典与分类法（提取/分类/回写共用）
+    │   ├── engines.md              # Utage / Fungus 引擎专项定位与提取规则
+    │   ├── traps.md                # 工具行为陷阱与排查（按症状查）
+    │   └── dll-patch.md            # Assembly-CSharp.dll 硬编码文本补丁
+    └── scripts/                    # PowerShell / Python 脚本骨架
+        ├── extract_unique_en.ps1   # 提取独特英文 → 分类筛选 → 合并译文
+        ├── writeback.ps1           # 映射回写 / 人工补翻 / RefIds 兜底扫描
+        ├── translate_direct.py     # 直连 HTTP 翻译 + 漏译重试 + strip 回写 + 残留审计
+        ├── scan_ldstr.py           # 程序集 ldstr 全量扫描（dnfile）
+        └── patch_us_heap.py        # #US 堆原地替换回写骨架
 ```
 
 ## 详细文档
 
-完整工作流、脚本类文本结构速查表、实战陷阱记录、PowerShell / Python 脚本骨架见：
+主流程见 **[unity-game-localization/SKILL.md](./unity-game-localization/SKILL.md)**，其内附「按需读参考文件」渐进披露引导表：
 
-**[unity-game-localization/SKILL.md](./unity-game-localization/SKILL.md)**
+- [references/class-fields.md](./unity-game-localization/references/class-fields.md) —— 脚本类→文本字段字典、text/name/format/review/tech 分类法
+- [references/engines.md](./unity-game-localization/references/engines.md) —— Utage（视觉小说）与 Fungus 引擎专项定位与提取规则
+- [references/traps.md](./unity-game-localization/references/traps.md) —— 工具行为陷阱与排查
+- [references/dll-patch.md](./unity-game-localization/references/dll-patch.md) —— Assembly-CSharp.dll 硬编码文本补丁
+- [scripts/](./unity-game-localization/scripts/) —— 可复用的 PowerShell / Python 脚本骨架
 
 ## 说明
 
